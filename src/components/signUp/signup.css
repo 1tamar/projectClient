@@ -1,0 +1,15 @@
+ @media all and (min-width: 480px) {
+    .Signup-body {
+      /* float: left;
+      width: 100%; */
+      padding: 60px 0;
+      padding-right: 72%;
+      padding-top: 10%
+    }
+  
+    .Signup-body form {
+      margin: 0 auto;
+      max-width: 220px;
+      
+    } 
+  } 

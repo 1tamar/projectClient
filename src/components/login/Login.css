@@ -1,0 +1,20 @@
+@media all and (min-width: 480px) {
+    .Login {
+      padding: 60px 0;
+    }
+  
+    .Login form {
+      margin: 0 auto;
+      max-width: 250px;
+    }
+  }
+ .Login{
+   padding-right: 72%;
+   padding-top: 10%
+ }
+ .background-login{
+   /* background-color: blueviolet; */
+   height: 550px;
+   background-image: url('../Pictures/רקע.jpg');
+   background-size: cover;
+ }

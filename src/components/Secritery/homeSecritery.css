@@ -1,0 +1,22 @@
+
+.circle {
+    border-radius: 75px;
+    background: #73AD21;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    float: left;
+    text-align:center;
+}
+.aaaa{
+    padding-top: 3%;
+}
+#circle1{
+    margin-left: 30%;
+}
+#circle2{
+    margin-left: 3%;
+}
+#circle3{
+    margin-left: 2%;
+}
