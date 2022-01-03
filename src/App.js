@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         {/* <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
           מינהל קהילתי אשכולות
@@ -49,7 +49,7 @@ function App() {
           </div>
 
         </div>
-      </nav>  
+      </nav>   */}
 
       <Provider store={Store}>
         <Router>

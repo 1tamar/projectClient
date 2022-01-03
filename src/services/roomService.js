@@ -1,10 +1,10 @@
 import axios from "axios"
 import config from "../config.json"
-export async function GetAllRooms() {
-    //debugger;
+export async function GettAllRooms() {
+    // debugger;
     const {data} =await axios.get(`https://localhost:44355/api/rooms`);
-    console.log(data.Data);
-    return  data.Data;
+    // console.log(data.Messege);
+    return  data;
 }
-const RoomMethods = { GetAllRooms };
-export default RoomMethods;
+const GetRoomsMethod = { GettAllRooms };
+export default GetRoomsMethod;

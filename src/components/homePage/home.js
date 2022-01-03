@@ -24,29 +24,10 @@ export default withRouter(connect(mapStateToProps)(function Home(props) {
     <h1>
       מינהל קהילתי אשכולות
     </h1>
-    {/* <Carousel >
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={im1}
-          alt="First slide"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={im2}
-          alt="Second slide"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={im3}
-          alt="Third slide"
-        />
-      </Carousel.Item>
-    </Carousel> */}
+    <alert>
+      hi!
+    </alert>
+    
   </>
 
 }))

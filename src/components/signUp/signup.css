@@ -1,7 +1,7 @@
- @media all and (min-width: 480px) {
+ /* @media all and (min-width: 480px) {
     .Signup-body {
       /* float: left;
-      width: 100%; */
+      width: 100%; 
       padding: 60px 0;
       padding-right: 72%;
       padding-top: 10%
@@ -12,4 +12,60 @@
       max-width: 220px;
       
     } 
-  } 
+  }  */
+
+  @media all and (min-width: 480px) {
+    .Signup-body {
+      /* float: left;
+        width: 100%; */
+      padding: 60px 0;
+      padding-right: 72%;
+      padding-top: 10%;
+    }
+  
+    .Signup-body form {
+      margin: 0 auto;
+      max-width: 220px;
+    }
+  
+    .Signup-body {
+      /* background-color: blueviolet; */
+      height: 550px;
+      background: url("../Pictures/רקע.jpg");
+      background-repeat: no-repeat;
+      background-size: 100vw 120vh;
+      height: 120vh;
+    }
+  
+    .inputs {
+      width: 80% !important;
+      margin-right: 25px;
+      border-radius: 15px !important;
+      border-color: black !important;
+      background-color: #83b842 !important;
+    }
+  
+    .sign {
+      width: 50% !important;
+      margin-right: 25%;
+      border-radius: 15px !important;
+      background-color: #e48324 !important;
+      border: none !important;
+    }
+  
+    .formGroup {
+      margin-top: -15px !important;
+    }
+  
+    .formLable {
+      font-weight: bold;
+    }
+  
+    .form {
+      margin-top: 40% !important;
+    }
+  }
+  
+  
+  
+  
