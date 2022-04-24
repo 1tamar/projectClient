@@ -1,33 +1,59 @@
-import React from 'react'
-import { connect } from 'react-redux';
+
+
+
+import React, { useEffect } from 'react'
 import { withRouter } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
-// import im1 from '../Pictures/background1.jpg';
-// import im2 from '../Pictures/מראות_17.jpg';
-// import im3 from '../Pictures/ComputersRooms.jpg';
 import "./home.css";
 
+import { useSelector, useDispatch } from 'react-redux';
+import GetEquipmentMethod from '../../services/EquipmentService'
+import GetRoomsMethod from "../../services/roomService";
+import GetRoomTypeMethod from "../../services/RoomTypeService";
+import AddInlayMethod from "../../services/InlayService";
 
-function mapStateToProps(state) {
-  return { ...state };
-}
 
 
-export default withRouter(connect(mapStateToProps)(function Home(props) {
 
-  function login() {
-    // debugger;
-    const { history } = props;
-    history.push('./login');
+
+
+export default withRouter(function Home(props) {
+  const{history}=props;
+  const dispatch = useDispatch()
+  let RequestRoomsTypes = {};
+  let RequestRooms = {};
+  let RequestEquipments = {};
+
+  useEffect(async ()  => {
+    try {
+      RequestRoomsTypes = await GetRoomTypeMethod.GettAllRoomTypes();
+      if (RequestRoomsTypes.Status == true) {
+        dispatch({ type: "SET_ROOM_TYPES", payload: RequestRoomsTypes.Data });
+      }
+      RequestRooms = await GetRoomsMethod.GettAllRooms();
+      if (RequestRooms.Status == true) {
+        dispatch({type:"SET_ROOMS",payload:RequestRooms.Data});
+      }
+      RequestEquipments = await GetEquipmentMethod.GettAllEquipment();
+      if (RequestEquipments.Status == true) {
+        dispatch({type:"SET_EQUIPMENT",payload:RequestEquipments.Data});
+      }
+    }
+    catch (e) {
+      console.log(e.message);
+    }
+
+  }, [])
+  const currentUser = useSelector(state => state.globalState.currentUser)
+
+  function goToInput()
+  {
+    history.push('./input')
+    
   }
   return <>
-    <h1>
-      מינהל קהילתי אשכולות
-    </h1>
-    <alert>
-      hi!
-    </alert>
-    
+    <h1>{currentUser.name}  שלום!</h1>
+    <button onClick={goToInput}>go to input</button>
   </>
 
-}))
+})
